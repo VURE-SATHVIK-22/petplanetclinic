@@ -51,6 +51,7 @@ function App() {
     yearsExperience: 0
   });
   const [countersAnimated, setCountersAnimated] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
   
   const heroRef = useRef(null);
   const successRef = useRef(null);
