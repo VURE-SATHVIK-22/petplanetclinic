@@ -577,6 +577,77 @@ function App() {
         </div>
       </section>
 
+      {/* Success Stories Section */}
+      <section ref={successRef} className="py-20 bg-gradient-to-br from-blue-50 to-sky-50" data-testid="success-stories-section">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16 scroll-animate">
+            <h2 className="text-4xl sm:text-5xl font-bold text-blue-900 mb-4 font-poppins" data-testid="success-title">
+              Success Stories That Warm Our Hearts
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Our commitment to excellence shows in every successful treatment and every happy, healthy dog that walks out our doors.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 scroll-animate text-center" data-testid="success-card-dogs-treated">
+              <div className="bg-gradient-to-br from-orange-500 to-orange-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Heart className="w-10 h-10 text-white" />
+              </div>
+              <div className="text-5xl font-bold text-blue-900 mb-2 font-poppins" data-testid="counter-dogs-treated">
+                {successCounters.dogsTeated.toLocaleString()}+
+              </div>
+              <p className="text-gray-600 font-medium">Dogs Treated Successfully</p>
+            </div>
+
+            <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 scroll-animate text-center" data-testid="success-card-success-rate">
+              <div className="bg-gradient-to-br from-teal-700 to-green-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Shield className="w-10 h-10 text-white" />
+              </div>
+              <div className="text-5xl font-bold text-blue-900 mb-2 font-poppins" data-testid="counter-success-rate">
+                {successCounters.successRate}%
+              </div>
+              <p className="text-gray-600 font-medium">Success Rate in Surgeries</p>
+            </div>
+
+            <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 scroll-animate text-center" data-testid="success-card-emergency-cases">
+              <div className="bg-gradient-to-br from-sky-400 to-sky-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Activity className="w-10 h-10 text-white" />
+              </div>
+              <div className="text-5xl font-bold text-blue-900 mb-2 font-poppins" data-testid="counter-emergency-cases">
+                {successCounters.emergencyCases}+
+              </div>
+              <p className="text-gray-600 font-medium">Emergency Cases Handled</p>
+            </div>
+
+            <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 scroll-animate text-center" data-testid="success-card-years-experience">
+              <div className="bg-gradient-to-br from-green-600 to-teal-700 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Star className="w-10 h-10 text-white" />
+              </div>
+              <div className="text-5xl font-bold text-blue-900 mb-2 font-poppins" data-testid="counter-years-experience">
+                {successCounters.yearsExperience}
+              </div>
+              <p className="text-gray-600 font-medium">Years of Trusted Care</p>
+            </div>
+          </div>
+
+          <div className="mt-16 bg-gradient-to-r from-teal-700 to-green-600 rounded-3xl p-12 text-center text-white scroll-animate" data-testid="success-testimonial-banner">
+            <div className="max-w-4xl mx-auto">
+              <div className="flex justify-center mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-8 h-8 text-orange-400 fill-orange-400" />
+                ))}
+              </div>
+              <p className="text-2xl italic mb-6">
+                "Every successful treatment reminds us why we do what we do. Our passion is seeing dogs thrive and families reunited with their healthy, happy companions."
+              </p>
+              <p className="text-xl font-bold">Dr. Sarah Martinez</p>
+              <p className="text-lg opacity-90">Lead Veterinarian & Founder</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose Us Section */}
       <section className="py-20 bg-gray-50" data-testid="why-choose-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
