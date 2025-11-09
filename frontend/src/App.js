@@ -605,6 +605,87 @@ function App() {
         </div>
       </section>
 
+      {/* Treatment Gallery Section */}
+      <section className="py-20 bg-white" data-testid="treatment-gallery-section">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 scroll-animate">
+            <h2 className="text-4xl sm:text-5xl font-bold text-blue-900 mb-4 font-poppins" data-testid="gallery-title">
+              Our Treatment Facilities
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              State-of-the-art equipment and comfortable spaces designed for your dog's care and comfort
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4 md:gap-6 lg:gap-8 mb-12">
+            {galleryImages.map((image, index) => (
+              <div
+                key={image.id}
+                className="scroll-animate group cursor-pointer"
+                onClick={() => setSelectedImage(image)}
+                data-testid={`gallery-image-${index}`}
+              >
+                <div className="relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                  <img
+                    src={image.url}
+                    alt={image.alt}
+                    loading="lazy"
+                    className="w-full h-full object-cover aspect-square"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <p className="text-white font-bold text-lg" data-testid={`gallery-label-${index}`}>
+                      {image.title}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center scroll-animate">
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="bg-orange-500 text-white px-8 py-4 rounded-full hover:bg-orange-600 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 shadow-lg hover:shadow-2xl text-lg font-bold"
+              data-testid="gallery-cta-btn"
+            >
+              Schedule a Tour
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Lightbox Modal */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+          onClick={() => setSelectedImage(null)}
+          data-testid="lightbox-modal"
+        >
+          <button
+            onClick={() => setSelectedImage(null)}
+            className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors"
+            data-testid="lightbox-close-btn"
+          >
+            <X className="w-8 h-8" />
+          </button>
+          <div className="max-w-4xl w-full" onClick={(e) => e.stopPropagation()}>
+            <img
+              src={selectedImage.url}
+              alt={selectedImage.alt}
+              className="w-full h-auto rounded-lg"
+              data-testid="lightbox-image"
+            />
+            <p className="text-white text-center mt-4 text-xl font-bold" data-testid="lightbox-title">
+              {selectedImage.title}
+            </p>
+            <p className="text-gray-300 text-center mt-2" data-testid="lightbox-description">
+              {selectedImage.alt}
+            </p>
+          </div>
+        </div>
+      )}
+
       {/* Success Stories Section */}
       <section ref={successRef} className="py-20 bg-gradient-to-br from-blue-50 to-sky-50" data-testid="success-stories-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
