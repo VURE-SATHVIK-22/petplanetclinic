@@ -310,6 +310,33 @@ function App() {
     }
   ];
 
+  const galleryImages = [
+    { 
+      id: 1, 
+      title: "Surgical Suite", 
+      url: "https://placehold.co/600x600/e0e7ff/1e40af?text=Surgical+Suite&font=roboto", 
+      alt: "Modern surgical operating room with advanced equipment" 
+    },
+    { 
+      id: 2, 
+      title: "Examination Room", 
+      url: "https://placehold.co/600x600/dbeafe/0f766e?text=Examination+Room&font=roboto", 
+      alt: "Bright and clean examination room" 
+    },
+    { 
+      id: 3, 
+      title: "Recovery Area", 
+      url: "https://placehold.co/600x600/f0fdfa/059669?text=Recovery+Area&font=roboto", 
+      alt: "Comfortable and safe recovery kennels" 
+    },
+    { 
+      id: 4, 
+      title: "Diagnostic Equipment", 
+      url: "https://placehold.co/600x600/fed7aa/ea580c?text=Diagnostic+Equipment&font=roboto", 
+      alt: "Advanced diagnostic and imaging machines" 
+    }
+  ];
+
   const faqs = [
     {
       question: 'What are your operating hours?',
