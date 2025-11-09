@@ -114,6 +114,18 @@ function App() {
     return () => observer.disconnect();
   }, [countersAnimated]);
 
+  // Lightbox escape key handler
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === 'Escape' && selectedImage) {
+        setSelectedImage(null);
+      }
+    };
+
+    document.addEventListener('keydown', handleEscape);
+    return () => document.removeEventListener('keydown', handleEscape);
+  }, [selectedImage]);
+
   const animateCounters = () => {
     const targets = {
       dogsTeated: 5000,
