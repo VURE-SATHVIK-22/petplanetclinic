@@ -1210,7 +1210,7 @@ function App() {
         href="https://wa.me/5551234567"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 left-6 bg-green-600 text-white p-4 rounded-full shadow-2xl hover:bg-green-700 transition-all duration-300 transform hover:scale-110 z-50 animate-pulse"
+        className="fixed bottom-6 left-6 bg-green-600 text-white p-4 rounded-full shadow-2xl hover:bg-green-700 transition-all duration-300 hover:scale-105 hover:shadow-3xl z-50"
         data-testid="whatsapp-float-btn"
       >
         <MessageCircle className="w-6 h-6" />
