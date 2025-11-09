@@ -479,50 +479,53 @@ function App() {
         ref={heroRef}
         className="relative min-h-screen flex items-center justify-center pt-20"
         style={{
-          backgroundImage: 'url(https://images.unsplash.com/photo-1651212508936-dfb6f6ea3d81?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwxfHxoYXBweSUyMGdvbGRlbiUyMHJldHJpZXZlcnxlbnwwfHx8fDE3NjI3MTE4MjV8MA&ixlib=rb-4.1.0&q=85)',
+          backgroundImage: 'url(https://images.pexels.com/photos/7469229/pexels-photo-7469229.jpeg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
         data-testid="hero-section"
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900 via-blue-900/80 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 via-teal-800/85 to-blue-900/90"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center lg:text-left">
           <div className="lg:w-2/3">
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 font-poppins" data-testid="hero-title">
+            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold text-white mb-6 font-poppins hero-title" data-testid="hero-title">
               Pet Planet Dog Clinic
             </h1>
-            <p className="text-xl sm:text-2xl text-sky-400 mb-8 font-medium" data-testid="hero-subtitle">
+            <p className="text-2xl sm:text-3xl text-sky-400 mb-4 font-medium hero-subtitle" data-testid="hero-subtitle">
               Where Your Dog's Health Comes First
+            </p>
+            <p className="text-lg sm:text-xl text-white mb-10 opacity-90">
+              Compassionate care, expert veterinarians, and state-of-the-art facilities for your best friend
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
               <button
                 onClick={() => scrollToSection('contact')}
-                className="bg-orange-500 text-white px-8 py-4 rounded-full hover:bg-orange-600 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-2xl text-lg font-medium"
+                className="bg-orange-500 text-white px-10 py-5 rounded-full hover:bg-orange-600 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 shadow-2xl hover:shadow-3xl text-xl font-bold"
                 data-testid="hero-book-btn"
               >
                 Book Appointment
               </button>
               <a
                 href="tel:5551234567"
-                className="bg-white text-orange-500 px-8 py-4 rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-2xl text-lg font-medium flex items-center justify-center gap-2"
+                className="bg-teal-700 text-white px-10 py-5 rounded-full hover:bg-teal-800 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 shadow-2xl hover:shadow-3xl text-xl font-bold flex items-center justify-center gap-2"
                 data-testid="hero-emergency-btn"
               >
-                <Phone className="w-5 h-5" />
+                <Phone className="w-6 h-6" />
                 Emergency: Call Now
               </a>
             </div>
-            <div className="flex flex-wrap gap-6 justify-center lg:justify-start text-white">
-              <div className="flex items-center gap-2" data-testid="trust-badge-licensed">
-                <Shield className="w-5 h-5 text-sky-400" />
-                <span className="text-sm">Licensed Vets</span>
+            <div className="flex flex-wrap gap-8 justify-center lg:justify-start text-white">
+              <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full" data-testid="trust-badge-licensed">
+                <Shield className="w-6 h-6 text-sky-400" />
+                <span className="text-base font-medium">Licensed Vets</span>
               </div>
-              <div className="flex items-center gap-2" data-testid="trust-badge-emergency">
-                <Clock className="w-5 h-5 text-sky-400" />
-                <span className="text-sm">24/7 Emergency</span>
+              <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full" data-testid="trust-badge-emergency">
+                <Clock className="w-6 h-6 text-sky-400" />
+                <span className="text-base font-medium">24/7 Emergency</span>
               </div>
-              <div className="flex items-center gap-2" data-testid="trust-badge-experience">
-                <Star className="w-5 h-5 text-sky-400" />
-                <span className="text-sm">10+ Years Experience</span>
+              <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full" data-testid="trust-badge-experience">
+                <Star className="w-6 h-6 text-sky-400" />
+                <span className="text-base font-medium">10+ Years Experience</span>
               </div>
             </div>
           </div>
