@@ -44,8 +44,16 @@ function App() {
   });
   const [formErrors, setFormErrors] = useState({});
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [successCounters, setSuccessCounters] = useState({
+    dogsTeated: 0,
+    successRate: 0,
+    emergencyCases: 0,
+    yearsExperience: 0
+  });
+  const [countersAnimated, setCountersAnimated] = useState(false);
   
   const heroRef = useRef(null);
+  const successRef = useRef(null);
 
   // Scroll detection
   useEffect(() => {
