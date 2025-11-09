@@ -92,6 +92,59 @@ function App() {
     return () => observer.disconnect();
   }, []);
 
+  // Success counter animation
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !countersAnimated) {
+            setCountersAnimated(true);
+            animateCounters();
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    if (successRef.current) {
+      observer.observe(successRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [countersAnimated]);
+
+  const animateCounters = () => {
+    const targets = {
+      dogsTeated: 5000,
+      successRate: 98,
+      emergencyCases: 500,
+      yearsExperience: 15
+    };
+
+    const duration = 2000; // 2 seconds
+    const steps = 60;
+    const stepDuration = duration / steps;
+
+    let currentStep = 0;
+
+    const interval = setInterval(() => {
+      currentStep++;
+      const progress = currentStep / steps;
+
+      setSuccessCounters({
+        dogsTeated: Math.floor(targets.dogsTeated * progress),
+        successRate: Math.floor(targets.successRate * progress),
+        emergencyCases: Math.floor(targets.emergencyCases * progress),
+        yearsExperience: Math.floor(targets.yearsExperience * progress)
+      });
+
+      if (currentStep >= steps) {
+        clearInterval(interval);
+        setSuccessCounters(targets);
+      }
+    }, stepDuration);
+  };
+
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
