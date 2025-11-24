@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { useEffect } from 'react';
 import '@/App.css';
@@ -8,7 +8,6 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 
 // Pages
-import Home from '@/pages/Home';
 import Services from '@/pages/Services';
 import ServiceDetail from '@/pages/ServiceDetail';
 import Diagnostic from '@/pages/Diagnostic';
@@ -23,6 +22,36 @@ import NotFound from '@/pages/NotFound';
 // Analytics
 import { initAnalytics } from '@/utils/analytics';
 
+// Import the original home page component
+import HomeOriginal from '@/pages/HomeOriginal';
+
+function AppContent() {
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
+
+  return (
+    <div className="min-h-screen bg-gray-50 flex flex-col">
+      {!isHomePage && <Header />}
+      <main className={isHomePage ? '' : 'flex-grow'}>
+        <Routes>
+          <Route path="/" element={<HomeOriginal />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/services/:slug" element={<ServiceDetail />} />
+          <Route path="/diagnostic" element={<Diagnostic />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/appointments" element={<Appointments />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
+      {!isHomePage && <Footer />}
+    </div>
+  );
+}
+
 function App() {
   useEffect(() => {
     initAnalytics();
@@ -31,25 +60,7 @@ function App() {
   return (
     <HelmetProvider>
       <Router>
-        <div className="min-h-screen bg-gray-50 flex flex-col">
-          <Header />
-          <main className="flex-grow">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/services/:slug" element={<ServiceDetail />} />
-              <Route path="/diagnostic" element={<Diagnostic />} />
-              <Route path="/gallery" element={<Gallery />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/appointments" element={<Appointments />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/blog/:slug" element={<BlogPost />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
+        <AppContent />
       </Router>
     </HelmetProvider>
   );
