@@ -1,31 +1,37 @@
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background circle -->
-  <circle cx="50" cy="50" r="48" fill="#0f766e"/>
+  <!-- Background gradient circle -->
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2C7BE5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00BFA6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
   
-  <!-- Paw print -->
-  <g>
-    <!-- Main pad -->
-    <ellipse cx="50" cy="60" rx="16" ry="20" fill="#f97316"/>
-    
-    <!-- Top left toe -->
-    <ellipse cx="32" cy="38" rx="7" ry="11" fill="#f97316" transform="rotate(-15 32 38)"/>
-    
-    <!-- Top center toe -->
-    <ellipse cx="50" cy="32" rx="7" ry="11" fill="#f97316"/>
-    
-    <!-- Top right toe -->
-    <ellipse cx="68" cy="38" rx="7" ry="11" fill="#f97316" transform="rotate(15 68 38)"/>
-    
-    <!-- Bottom right toe -->
-    <ellipse cx="70" cy="56" rx="6" ry="10" fill="#f97316" transform="rotate(25 70 56)"/>
+  <circle cx="50" cy="50" r="48" fill="url(#bgGrad)"/>
+  
+  <!-- Outer planet ring -->
+  <circle cx="50" cy="50" r="45" stroke="white" stroke-width="2" fill="none" opacity="0.3"/>
+  
+  <!-- Dog silhouette -->
+  <g transform="translate(30, 35)">
+    <ellipse cx="20" cy="10" rx="8" ry="9" fill="white"/>
+    <ellipse cx="15" cy="6" rx="3" ry="5" fill="white" transform="rotate(-20 15 6)"/>
+    <ellipse cx="25" cy="6" rx="3" ry="5" fill="white" transform="rotate(20 25 6)"/>
+    <ellipse cx="20" cy="22" rx="10" ry="8" fill="white"/>
+    <path d="M 28 20 Q 35 18 36 25" stroke="white" stroke-width="3" fill="none" stroke-linecap="round"/>
   </g>
   
-  <!-- Medical cross overlay -->
-  <g>
-    <!-- Vertical bar of cross -->
-    <rect x="46" cy="48" width="8" height="24" fill="white" rx="2"/>
-    
-    <!-- Horizontal bar of cross -->
-    <rect x="38" y="56" width="24" height="8" fill="white" rx="2"/>
+  <!-- Paw print -->}
+  <g transform="translate(55, 55)" opacity="0.9">
+    <ellipse cx="8" cy="10" rx="5" ry="6" fill="white"/>
+    <circle cx="4" cy="4" r="2" fill="white"/>
+    <circle cx="8" cy="2" r="2" fill="white"/>
+    <circle cx="12" cy="4" r="2" fill="white"/>
+  </g>
+  
+  <!-- Medical cross -->
+  <g transform="translate(35, 45)">
+    <rect x="8" y="0" width="4" height="16" fill="#FF8A00" rx="1"/>
+    <rect x="2" y="6" width="16" height="4" fill="#FF8A00" rx="1"/>
   </g>
 </svg>

@@ -38,17 +38,18 @@ export const siteConfig = {
     youtube: "https://youtube.com/@petplanetclinic"
   },
   
-  // Color Palette (Exact from current site)
+  // Modern Color Palette - Premium Healthcare Brand
   colors: {
-    primary: "#1e3a8a",      // blue-900
-    secondary: "#0f766e",    // teal-700
-    accent: "#f97316",       // orange-500
-    success: "#059669",      // green-600
-    background: "#f9fafb",   // gray-50
-    text: "#111827",         // gray-900
-    textLight: "#6b7280",    // gray-600
-    white: "#ffffff",
-    sky: "#38bdf8"          // sky-400
+    primary: "#2C7BE5",      // Primary Blue
+    secondary: "#00BFA6",    // Teal Accent
+    accent: "#FF8A00",       // CTA Orange
+    navy: "#0F1B33",         // Deep Navy
+    background: "#F7F9FC",   // Soft White
+    text: "#0F1B33",         // Deep Navy (text)
+    textLight: "#9BA6B2",    // Neutral Gray
+    white: "#FFFFFF",
+    glass: "rgba(255, 255, 255, 0.1)",
+    glassDark: "rgba(15, 27, 51, 0.8)"
   },
   
   // Typography
