@@ -250,47 +250,47 @@ function HomeOriginal() {
 
   const services = [
     {
-      icon: <Stethoscope className="w-12 h-12 text-teal-700" />,
+      icon: <Stethoscope className="w-12 h-12 text-[#2C7BE5]" />,
       name: 'Wellness Exams',
       description: 'Comprehensive preventive care to keep your dog healthy and happy throughout every life stage.'
     },
     {
-      icon: <Syringe className="w-12 h-12 text-teal-700" />,
+      icon: <Syringe className="w-12 h-12 text-[#2C7BE5]" />,
       name: 'Vaccinations',
       description: 'Complete immunization services to protect your pet from preventable diseases and illnesses.'
     },
     {
-      icon: <Activity className="w-12 h-12 text-teal-700" />,
+      icon: <Activity className="w-12 h-12 text-[#2C7BE5]" />,
       name: 'Surgical Services',
       description: 'Advanced surgical procedures including spay/neuter and orthopedic surgeries with modern techniques.'
     },
     {
-      icon: <Heart className="w-12 h-12 text-teal-700" />,
+      icon: <Heart className="w-12 h-12 text-[#2C7BE5]" />,
       name: 'Dental Care',
       description: 'Professional dental cleaning and oral health services to prevent tooth decay and gum disease.'
     },
     {
-      icon: <Scissors className="w-12 h-12 text-teal-700" />,
+      icon: <Scissors className="w-12 h-12 text-[#2C7BE5]" />,
       name: 'Grooming',
       description: 'Professional grooming services to keep your dog looking and feeling their absolute best.'
     },
     {
-      icon: <Shield className="w-12 h-12 text-teal-700" />,
+      icon: <Shield className="w-12 h-12 text-[#2C7BE5]" />,
       name: 'Emergency Care',
       description: '24/7 emergency veterinary services available for urgent situations and critical care needs.'
     },
     {
-      icon: <Hotel className="w-12 h-12 text-teal-700" />,
+      icon: <Hotel className="w-12 h-12 text-[#2C7BE5]" />,
       name: 'Boarding',
       description: 'Safe and comfortable boarding facilities with personalized care while you\'re away from home.'
     },
     {
-      icon: <UtensilsCrossed className="w-12 h-12 text-teal-700" />,
+      icon: <UtensilsCrossed className="w-12 h-12 text-[#2C7BE5]" />,
       name: 'Nutrition',
       description: 'Expert nutritional counseling to ensure optimal health through proper diet and feeding plans.'
     },
     {
-      icon: <Microscope className="w-12 h-12 text-teal-700" />,
+      icon: <Microscope className="w-12 h-12 text-[#2C7BE5]" />,
       name: 'Diagnostics',
       description: 'State-of-the-art diagnostic services including X-ray, ultrasound, and laboratory testing.'
     }
@@ -389,8 +389,8 @@ function HomeOriginal() {
     <div className="min-h-screen bg-gray-50">
       {/* Navigation */}
       <nav
-        className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-          scrolled ? 'bg-white shadow-lg' : 'bg-white bg-opacity-95'
+        className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+          scrolled ? 'glass-card shadow-strong' : 'glass backdrop-blur-xl'
         }`}
         data-testid="main-navigation"
       >
@@ -445,7 +445,7 @@ function HomeOriginal() {
             <div className="hidden md:block">
               <button
                 onClick={() => scrollToSection('contact')}
-                className="bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 transition-all duration-300 transform hover:-translate-y-1 shadow-md hover:shadow-xl font-medium"
+                className="btn-accent text-white px-6 py-3 rounded-full font-medium hover-lift"
                 data-testid="book-appointment-btn"
               >
                 Book Appointment
@@ -504,7 +504,7 @@ function HomeOriginal() {
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
-                className="w-full bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 transition-colors font-medium"
+                className="w-full btn-accent text-white px-6 py-3 rounded-full font-medium"
                 data-testid="mobile-book-appointment-btn"
               >
                 Book Appointment
@@ -541,14 +541,14 @@ function HomeOriginal() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
               <button
                 onClick={() => scrollToSection('contact')}
-                className="bg-orange-500 text-white px-10 py-5 rounded-full hover:bg-orange-600 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 shadow-2xl hover:shadow-3xl text-xl font-bold"
+                className="btn-accent text-white px-10 py-5 rounded-full text-xl font-bold hover-lift animate-float"
                 data-testid="hero-book-btn"
               >
                 Book Appointment
               </button>
               <a
                 href="tel:5551234567"
-                className="bg-teal-700 text-white px-10 py-5 rounded-full hover:bg-teal-800 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 shadow-2xl hover:shadow-3xl text-xl font-bold flex items-center justify-center gap-2"
+                className="btn-primary text-white px-10 py-5 rounded-full text-xl font-bold flex items-center justify-center gap-2 hover-lift"
                 data-testid="hero-emergency-btn"
               >
                 <Phone className="w-6 h-6" />
@@ -659,7 +659,7 @@ function HomeOriginal() {
           <div className="text-center scroll-animate">
             <button
               onClick={() => scrollToSection('contact')}
-              className="bg-orange-500 text-white px-8 py-4 rounded-full hover:bg-orange-600 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 shadow-lg hover:shadow-2xl text-lg font-bold"
+              className="btn-accent text-white px-8 py-4 rounded-full text-lg font-bold hover-lift"
               data-testid="gallery-cta-btn"
             >
               Schedule a Tour
@@ -864,7 +864,7 @@ function HomeOriginal() {
               </div>
               <button
                 onClick={() => scrollToSection('contact')}
-                className="bg-teal-700 text-white px-8 py-3 rounded-full hover:bg-teal-800 transition-all duration-300 transform hover:-translate-y-1 shadow-md hover:shadow-xl font-medium"
+                className="btn-primary text-white px-8 py-3 rounded-full font-medium hover-lift"
                 data-testid="meet-team-btn"
               >
                 Meet Our Team
@@ -921,7 +921,7 @@ function HomeOriginal() {
                     key={index}
                     onClick={() => setActiveTestimonial(index)}
                     className={`w-3 h-3 rounded-full transition-all ${
-                      index === activeTestimonial ? 'bg-teal-700 w-8' : 'bg-gray-300'
+                      index === activeTestimonial ? 'bg-[#2C7BE5] w-8' : 'bg-gray-300'
                     }`}
                     data-testid={`testimonial-dot-${index}`}
                   />
@@ -1161,7 +1161,7 @@ function HomeOriginal() {
 
                 <button
                   type="submit"
-                  className="w-full bg-orange-500 text-white px-8 py-4 rounded-full hover:bg-orange-600 transition-all duration-300 transform hover:-translate-y-1 shadow-md hover:shadow-xl font-medium flex items-center justify-center gap-2"
+                  className="w-full btn-accent text-white px-8 py-4 rounded-full font-medium flex items-center justify-center gap-2 hover-lift"
                   data-testid="contact-submit-btn"
                 >
                   <Send className="w-5 h-5" />
@@ -1342,7 +1342,7 @@ function HomeOriginal() {
       {showBackToTop && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 bg-teal-700 text-white p-4 rounded-full shadow-2xl hover:bg-teal-800 transition-all duration-300 transform hover:scale-110 z-50"
+          className="fixed bottom-6 right-6 btn-primary text-white p-4 rounded-full shadow-strong hover-glow z-50"
           data-testid="back-to-top-btn"
         >
           <ArrowUp className="w-6 h-6" />
