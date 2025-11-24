@@ -541,14 +541,14 @@ function HomeOriginal() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
               <button
                 onClick={() => scrollToSection('contact')}
-                className="btn-accent text-white px-10 py-5 rounded-full text-xl font-bold hover-lift animate-float"
+                className="btn-accent btn-magnetic btn-liquid text-white px-10 py-5 rounded-full text-xl font-bold hover-lift animate-float glow-pulse"
                 data-testid="hero-book-btn"
               >
                 Book Appointment
               </button>
               <a
                 href="tel:5551234567"
-                className="btn-primary text-white px-10 py-5 rounded-full text-xl font-bold flex items-center justify-center gap-2 hover-lift"
+                className="btn-primary btn-magnetic btn-liquid text-white px-10 py-5 rounded-full text-xl font-bold flex items-center justify-center gap-2 hover-lift ripple"
                 data-testid="hero-emergency-btn"
               >
                 <Phone className="w-6 h-6" />
@@ -592,7 +592,7 @@ function HomeOriginal() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="scroll-animate bg-gray-50 p-8 rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group"
+                className="scroll-animate card-3d stagger-item group shimmer"
                 data-testid={`service-card-${index}`}
               >
                 <div className="mb-4 group-hover:scale-110 transition-transform duration-300">
