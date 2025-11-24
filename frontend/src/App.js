@@ -27,6 +27,7 @@ import {
   Send,
   MessageCircle
 } from 'lucide-react';
+import VetLogo from '@/components/VetLogo';
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -397,7 +398,7 @@ function App() {
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <div className="flex items-center space-x-2" data-testid="clinic-logo">
-              <Heart className="w-8 h-8 text-orange-500 fill-orange-500" />
+              <VetLogo className="w-8 h-8" color="#f97316" />
               <span className="text-2xl font-bold text-blue-900 font-poppins">Pet Planet</span>
             </div>
 
@@ -1245,7 +1246,7 @@ function App() {
             {/* About */}
             <div data-testid="footer-about">
               <div className="flex items-center gap-2 mb-4">
-                <Heart className="w-6 h-6 text-orange-500 fill-orange-500" />
+                <VetLogo className="w-6 h-6" color="#f97316" />
                 <span className="text-xl font-bold font-poppins">Pet Planet</span>
               </div>
               <p className="text-gray-300 text-sm">

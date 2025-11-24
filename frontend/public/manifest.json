@@ -1,0 +1,16 @@
+{
+  "short_name": "Pet Planet",
+  "name": "Pet Planet Dog Clinic",
+  "description": "Professional veterinary care for dogs with compassion, expertise, and state-of-the-art facilities",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#0f766e",
+  "background_color": "#ffffff"
+}
